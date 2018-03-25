@@ -1,0 +1,23 @@
+{
+  "name": "choohandbookanimalswebpractice",
+  "version": "1.0.0",
+  "description": "Test application to learn choo.",
+  "main": "index.js",
+  "scripts": {
+    "BudoRun": "budo index.js --live --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalaunu/ChooHandbookAnimalsWebPractice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kalaunu/ChooHandbookAnimalsWebPractice/issues"
+  },
+  "homepage": "https://github.com/Kalaunu/ChooHandbookAnimalsWebPractice#readme",
+  "dependencies": {
+    "choo": "^6.10.3",
+    "s": "^0.1.1"
+  }
+}
