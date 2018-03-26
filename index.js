@@ -38,6 +38,7 @@ app.use(function (state, emitter) {
 
 //Create the route
 app.route('/', main)
+app.route('/filter/:type', main)
 
 // start app
 app.mount('div')

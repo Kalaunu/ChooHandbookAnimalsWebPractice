@@ -13,16 +13,32 @@ module.exports = function (state, emit) {
         <img src="/assets/bg.gif" onclick=${add} />
         ${state.animals.map(animalMap)}
       </div>
+      <div class="controls">
+      <ul class="filters">
+        <li><a href="/">all</a></li>
+        <li><a href="/filter/crocodile">crocodiles</a></li>
+        <li><a href="/filter/koala">koalas</a></li>
+        <li><a href="/filter/lion">lions</a></li>
+        <li><a href="/filter/tiger">tigers</a></li>
+        <li><a href="/filter/walrus">walruses</a></li>
+      </ul>
+    </div>
     </div>
   `
 
     // map function
-    function animalMap (obj, i) {
-        return animal(remove, obj, i)
+    function animalMap(obj, i) {
+        var type = state.params.type
+
+        if (type && type !== obj.type) {
+            return // nothing
+        } else {
+            return animal(remove, obj, i)
+        }
     }
 
     // add new animal to state
-    function add (e) {
+    function add(e) {
         let x = e.offsetX - 20
         let y = e.offsetY - 10
 
@@ -30,7 +46,7 @@ module.exports = function (state, emit) {
     }
 
     // remove animal from state
-    function remove (e) {
+    function remove(e) {
         let index = e.target.id
         emit('removeAnimal', index)
     }
