@@ -4,7 +4,8 @@
   "description": "Test application to learn choo.",
   "main": "index.js",
   "scripts": {
-    "BudoRun": "budo index.js --live --open"
+    "BudoRun": "budo index.js --live --open",
+    "BankaiRun": "bankai start index.js"
   },
   "repository": {
     "type": "git",
